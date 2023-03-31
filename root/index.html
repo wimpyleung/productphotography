@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Photography - Product Photography</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <img src="./images/header.png" alt="" class="">
+        </header>
+        <article id="large">
+            <img src="images/large1.jpg" width="800" height="533" alt="" />
+        </article>
+        <aside>
+            <ol>
+                <h1>Sage Crystal</h1>
+                <p>Quartz Illumination Bracelet</p>
+                <li>Hero Shot – The image of the bracelet with a background similar to the existing brand,
+                    shows the special shape of the bracelet and focus on the details and unique colour in each grain of crystal.</li>
+                <li>Individual Shots – Three standard shots of the existing brand, 45 degrees, top shot and side shot. 
+                    Use a stone as a stand for the other two images, showing contrast of a stone and the natural crystal.</li>
+                <li>Scale Shot – Use a standard bracelet gift box the show the scale of the bracelet. 
+                    Not putting the bracelet inside the box as usual, place the bracelet on the box to show the bracelet clearly.</li>
+                <li>Creative shot – Use a glass bottle to ‘wear’ the bracelet instead of a human model. 
+                    Take this shot under sunshine with the glass bottle to make the crystal bracelet shine. 
+                    Shoot in front of the trees and catch the shadow for background. Use natural elements - 
+                    sunshine and tree shadow to show the characteristic of the natural crystal bracelet.</li>
+                
+            </ol>
+        </aside>
+        <article id="thumbs">
+            <img src="images/thumbnail1.jpg" width="155" height="130" name="thumbnail" alt="" />
+            <img src="images/thumbnail2.jpg" width="155" height="130" name="thumbnail" alt="" />
+            <img src="images/thumbnail3.jpg" width="155" height="130" name="thumbnail" alt="" />
+            <img src="images/thumbnail4.jpg" width="155" height="130" name="thumbnail" alt="" />
+            <img src="images/thumbnail5.jpg" width="155" height="130" name="thumbnail" alt="" />
+            <img src="images/thumbnail6.jpg" width="155" height="130" name="thumbnail" alt="" />
+            <img src="images/thumbnail7.jpg" width="155" height="130" name="thumbnail" alt="" />
+            <img src="images/thumbnail8.jpg" width="155" height="130" name="thumbnail" alt="" />
+        </article>
+        <footer>&copy; 2023 Wimpy Leung. All rights reserved.</footer>
+    </main>
+    <script>
+        $('img').on("error", function() {
+            $(this).attr('src', 'images/placeholder.jpg');
+        });
+        $('#thumbs img').click(function() {
+            $('#large img').attr('src', 'images/large' + ($(this).index() + 1) + '.jpg');
+        });
+    </script>
+</body>
+
+</html>
